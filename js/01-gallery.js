@@ -78,7 +78,7 @@ function onModal(evt) {
       return;
     }
   }
-  console.log(evt);
+  //   console.log(evt);
   instance.show();
   return instance;
 }
