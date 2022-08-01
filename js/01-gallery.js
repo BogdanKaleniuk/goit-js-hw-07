@@ -60,6 +60,8 @@ function createGalleryCardsMarkup(galleryItems) {
 galleryContainer.addEventListener('click', onModal);
 function onModal(evt) {
   evt.preventDefault();
+  // const test = evt.target.classList.contains('gallery__item');
+  // if (test) {
   //   console.log(evt.target);
   const instance = basicLightbox.create(`<img src="${evt.target.dataset.source}">`, {
     onShow: instance => {
@@ -80,5 +82,8 @@ function onModal(evt) {
   }
   //   console.log(evt);
   instance.show();
-  return instance;
+  // return instance;
+  // } else {
+  // return;
+  // }
 }

@@ -18,10 +18,8 @@ import { galleryItems } from './gallery-items.js';
 const galleryContainer = document.querySelector('.gallery');
 // создаем переменую где будет храниться вся галерея
 const cardMarkup = createGalleryCardsMarkup(galleryItems);
-
 // добавляем созданную галерею в разметку
 galleryContainer.insertAdjacentHTML('beforeend', cardMarkup);
-
 function createGalleryCardsMarkup(galleryItems) {
   return galleryItems
     .map(({ preview, original, description }) => {
@@ -31,14 +29,11 @@ function createGalleryCardsMarkup(galleryItems) {
     src="${preview}" 
     data-source="${original}"
     alt="${description}" />
-    </a>
-    
-    
-    `;
+    </a>`;
     })
     .join('');
 }
-var lightbox = new SimpleLightbox('.gallery a', {
+let lightbox = new SimpleLightbox('.gallery a', {
   /* options */
   captions: true,
   captionType: 'attr',
